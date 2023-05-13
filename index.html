@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,700&family=Sono:wght@200;400&display=swap" 
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Movie Website</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container"><h1 class="logo">Cinema</h1></div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">Home</li>
+                    <li class="menu-list-item">Movies</li>
+                    <li class="menu-list-item">Series</li>
+                    <li class="menu-list-item">Popular</li>
+                    <li class="menu-list-item">Trends</li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="Img/profilepic.png" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fa-solid fa-moon toggle-icon"></i>
+                    <i class="fa-solid fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <i class="left-menu-icon fa-solid fa-magnifying-glass search-icon"></i>
+        <i class="left-menu-icon fa-solid fa-house"></i>
+        <i class="left-menu-icon fa-solid fa-users"></i>
+        <i class="left-menu-icon fa-solid fa-bookmark"></i>
+        <i class="left-menu-icon fa-solid fa-tv"></i>
+        <i class="left-menu-icon fa-solid fa-hourglass-start"></i>
+        <i class="left-menu-icon fa-solid fa-shopping-cart"></i>
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to left, rgba(0, 0, 0, 0), #151515);"
+            >
+                <div class="headerinfo">
+                    <h1 class="movieTitle"></h1>
+                    <div class="extrainfo">
+                        <p class="rating"></p>
+                        <p class="runtime"></p>
+                        <p class="releasedate"></p>
+                        
+                    </div>
+                    <p class="featured-desc"></p>
+                </div>
+               <div class="movie-info">
+                    <div>
+                        <p>Genre</p>
+                        <p>Country</p>
+                        <p>Language</p>
+                    </div>
+
+                    <div>
+                        <p class="movie-genre"></p>
+                        <p class="movie-country"></p>
+                        <p class="movie-audio"></p>                       
+                    </div>
+               </div>
+               <div class="button-watch">
+                    <button class="featured-button">Watch Movie</button>
+                    <button class="featured-button-trailer">Watch Trailer</button>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title"> New Releases</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img src="Img/17.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Panchayet</span>
+                            <p class="movie-list-item-desc"></p>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/18.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">FARZI</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/19.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">ASUR</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/20.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Hush Hush</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/21.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Permanent Roommates</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/22.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Breathe: Into the Shadows</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/23.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">FBI</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/24.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Blacklist</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+
+            <div class="movie-list-container">
+                <h1 class="movie-list-title"> Trending </h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img src="Img/9.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Kota factory</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/10.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">The Family Man</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/11.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Mirzapur</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/12.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Sacred Games</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/13.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Inside Edge</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/14.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Citadel</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/15.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Jubilee</span>
+                        </div>
+                        <div class="movie-list-item">
+                            <img src="Img/16.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Tandav</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515), url('Img/f-2.jpg');"
+            >
+               <img class="featured-title" src="Img/f-t-2.png" alt=""> 
+               <p class="featured-desc">
+
+               </p>
+            </div>
+
+            <div class="movie-list-container">
+                <h1 class="movie-list-title"> Most Popular</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img src="Img/1.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">The Storm</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/2.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Pieces Of Her</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/3.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Thor</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/4.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Spiderman</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/5.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Air Warriors</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/6.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Sherlock</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/7.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Jack Ryan</span>
+                        </div>
+
+                        <div class="movie-list-item">
+                            <img src="Img/8.jpg" alt="" class="movie-list-item-img">
+                            <span class="movie-list-item-title">Justified</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
