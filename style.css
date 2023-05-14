@@ -6,6 +6,72 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.loader {
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    perspective: 800px;
+}
+
+.inner {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+}
+  
+.inner.one {
+    left: 0%;
+    top: 0%;
+    animation: rotate-one 1s linear infinite;
+    border-bottom: 5px solid #EFEFFA;
+}
+
+.inner.two {
+    right: 0%;
+    top: 0%;
+    animation: rotate-two 1s linear infinite;
+    border-right: 5px solid #EFEFFA;
+}
+  
+.inner.three {
+    right: 0%;
+    bottom: 0%;
+    animation: rotate-three 1s linear infinite;
+    border-top: 5px solid #EFEFFA;
+}
+  
+ @keyframes rotate-one {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+  
+@keyframes rotate-two {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+  
+@keyframes rotate-three {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}
+
 .navbar {
     width: 100%;
     height: 50px;
@@ -46,6 +112,7 @@ body {
 
 .menu-list{
     display: flex;
+    align-items: center;
     list-style: none;
 }
 
@@ -109,15 +176,11 @@ body {
 	position: relative;
 	display: inline-block;
 	margin: 4px 2px;
-    padding-bottom: 30px;
-	height: 50px;
-	width: 50px;
 	vertical-align: bottom;
 }
 
 .button {
 	display: inline-block;
-	margin: 4px 2px;
 	height: 50px;
 	line-height: 50px;
 	text-align: center;
@@ -127,15 +190,12 @@ body {
 	user-select: none;
 }
 
-.home-icon{
-    cursor: pointer;
-}
-
 input{
     font-size: 25px;
 }
+
 .searchbutton {
-	font-size: 30px;
+	font-size: 20px;
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -143,13 +203,14 @@ input{
 
 .search {
 	position: absolute;
-	left: 50px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+    top: 10%;
+	left: 30px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
 	background-color: white;
 	outline: none;
 	border: none;
 	padding: 0;
 	width: 0;
-	height: 70%;
+	height: 80%;
 	z-index: 10;
 	transition-duration: 0.4s;
 	-moz-transition-duration: 0.4s;
@@ -160,6 +221,10 @@ input{
 .search:focus {
 	width: 363px; /* Bar width+1px */
 	padding: 0 16px 0 0;
+}
+
+.home-icon{
+    cursor: pointer;
 }
 
 .left-menu-icon{

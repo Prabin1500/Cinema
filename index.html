@@ -12,6 +12,12 @@
     <title>Movie Website</title>
 </head>
 <body>
+    <div class="loader">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+      </div>
+      
     <div class="navbar">
         <div class="navbar-container">
             <div class="logo-container"><h1 class="logo">Cinema</h1></div>
@@ -22,6 +28,16 @@
                     <li class="menu-list-item">Series</li>
                     <li class="menu-list-item">Popular</li>
                     <li class="menu-list-item">Trends</li>
+                    <li class="menu-list-item">
+                        <div class="search-container">
+                            <form id="search-form" action="https://api.tvmaze.com/search/shows">
+                                <input class="search" id="searchleft" type="search" name="q" placeholder="Search">
+                                    <label class="button searchbutton" for="searchleft">
+                                        <i class="fa-solid fa-magnifying-glass mglass"></i>
+                                    </label>
+                            </form>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="profile-container">
@@ -39,14 +55,6 @@
         </div>
     </div>
     <div class="sidebar">
-        <div class="search-container">
-            <form id="search-form" action="https://api.tvmaze.com/search/shows">
-                <input class="search" id="searchleft" type="search" name="q" placeholder="Search">
-                    <label class="button searchbutton" for="searchleft">
-                        <i class="left-menu-icon fa-solid fa-magnifying-glass mglass"></i>
-                    </label>
-            </form>
-        </div>
         <i class="left-menu-icon fa-solid fa-house home-icon"></i>
         <i class="left-menu-icon fa-solid fa-users"></i>
         <i class="left-menu-icon fa-solid fa-bookmark"></i>

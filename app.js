@@ -8,6 +8,7 @@ const ball = document.querySelector(".toggle-ball");
 const movieItem = document.querySelectorAll(".movie-list-item");
 const movieTitle = document.querySelectorAll(".movie-list-title");
 const container = document.querySelectorAll(".movie-list-container");
+const fullScreen = document.querySelector(".content-container");
 const items = document.querySelectorAll(".container, .movie-list-title, .sidebar, .navbar-container, .left-menu-icon, .toggle");
 const title = document.querySelector(".movieTitle");
 const description = document.querySelector(".featured-desc");
@@ -23,6 +24,7 @@ const runtime = document.querySelector(".runtime");
 const form = document.querySelector('#search-form');
 const input = form.querySelector('input');
 const homeIcon = document.querySelectorAll(".home-icon");
+const loaderIcon = document.querySelector(".loader");
 var moviesList = [];
 var link =[];
 
@@ -75,13 +77,24 @@ homeIcon.forEach((icon, i) => {
     })
 })
 
+loaderIcon.style.display = 'none';
+
 //implement search functionality
 input.addEventListener("keypress", (event) => {
+    
     if(event.key == "Enter"){
         event.preventDefault();
         event.stopPropagation();
+        loaderIcon.style.display = 'block';
+        fullScreen.style.display = 'none';
+        fullScreen.style.backgroundColor = 'black';
         if(input.value.length > 1) {
-            getSearchResults(input.value);
+            setTimeout(function(){
+                getSearchResults(input.value);
+                fullScreen.style.display = 'block';
+                loaderIcon.style.display = 'none';
+            }, 1000);
+            
         }
         
     }
@@ -154,10 +167,10 @@ const renderResults = (data, ratings) => {
 };
 
 const renderSearchResults = (data, ratings) => {
-    container[1].style.display = 'none';
     container[2].style.display = 'none';
     backgroundimg[1].style.display = 'none';
     movieTitle[0].innerText = "Searched item";
+    movieTitle[1].innerText = "Suggested Movies";
 
     console.log(movieLists[2]);
     renderResults(data, ratings);
@@ -181,6 +194,7 @@ const renderTopMovies = (data) => {
             <span class="movie-list-item-title">${data.items[arr[i]].title}</span>
         `
     }
+    getTopMovies();
 }
 
 const getSearchResults = async (inputValue) => {
