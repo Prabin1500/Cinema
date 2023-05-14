@@ -17,7 +17,7 @@
             <div class="logo-container"><h1 class="logo">Cinema</h1></div>
             <div class="menu-container">
                 <ul class="menu-list">
-                    <li class="menu-list-item active">Home</li>
+                    <li class="menu-list-item active home-icon">Home</li>
                     <li class="menu-list-item">Movies</li>
                     <li class="menu-list-item">Series</li>
                     <li class="menu-list-item">Popular</li>
@@ -39,8 +39,15 @@
         </div>
     </div>
     <div class="sidebar">
-        <i class="left-menu-icon fa-solid fa-magnifying-glass search-icon"></i>
-        <i class="left-menu-icon fa-solid fa-house"></i>
+        <div class="search-container">
+            <form id="search-form" action="https://api.tvmaze.com/search/shows">
+                <input class="search" id="searchleft" type="search" name="q" placeholder="Search">
+                    <label class="button searchbutton" for="searchleft">
+                        <i class="left-menu-icon fa-solid fa-magnifying-glass mglass"></i>
+                    </label>
+            </form>
+        </div>
+        <i class="left-menu-icon fa-solid fa-house home-icon"></i>
         <i class="left-menu-icon fa-solid fa-users"></i>
         <i class="left-menu-icon fa-solid fa-bookmark"></i>
         <i class="left-menu-icon fa-solid fa-tv"></i>
@@ -76,8 +83,8 @@
                     </div>
                </div>
                <div class="button-watch">
-                    <button class="featured-button">Watch Movie</button>
-                    <button class="featured-button-trailer">Watch Trailer</button>
+                    <button class="featured-button">Watch</button>
+                    <button class="featured-button-trailer">Trailer</button>
                 </div>
             </div>
             <div class="movie-list-container">
@@ -186,15 +193,15 @@
             </div>
 
             <div class="movie-list-container">
-                <h1 class="movie-list-title"> Most Popular</h1>
+                <h1 class="movie-list-title">Top Movies</h1>
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
-                        <div class="movie-list-item">
+                        <div class="movie-list-item top-movies">
                             <img src="Img/1.jpg" alt="" class="movie-list-item-img">
                             <span class="movie-list-item-title">The Storm</span>
                         </div>
 
-                        <div class="movie-list-item">
+                        <div class="movie-list-item top-movies">
                             <img src="Img/2.jpg" alt="" class="movie-list-item-img">
                             <span class="movie-list-item-title">Pieces Of Her</span>
                         </div>

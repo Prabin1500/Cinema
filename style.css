@@ -105,6 +105,63 @@ body {
     padding-top: 100px;
 }
 
+.search-container {
+	position: relative;
+	display: inline-block;
+	margin: 4px 2px;
+    padding-bottom: 30px;
+	height: 50px;
+	width: 50px;
+	vertical-align: bottom;
+}
+
+.button {
+	display: inline-block;
+	margin: 4px 2px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	user-select: none;
+}
+
+.home-icon{
+    cursor: pointer;
+}
+
+input{
+    font-size: 25px;
+}
+.searchbutton {
+	font-size: 30px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.search {
+	position: absolute;
+	left: 50px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+	background-color: white;
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 0;
+	height: 70%;
+	z-index: 10;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+
+.search:focus {
+	width: 363px; /* Bar width+1px */
+	padding: 0 16px 0 0;
+}
+
 .left-menu-icon{
     color: white;
     font-size: 20px;
