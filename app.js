@@ -1,7 +1,6 @@
 const apiUrl = 'https://api.tvmaze.com/search/shows?q=';
 const imdbUrl = "https://imdb-api.com/en/API/Ratings/k_z83w23e2/";
 const imdbtrailer = 'https://www.imdb.com/title/';
-const topMovies = 'https://imdb-api.com/en/API/Top250Movies/k_z83w23e2';
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
 const ball = document.querySelector(".toggle-ball");
@@ -182,21 +181,6 @@ const renderSearchResults = (data, ratings) => {
     }
 };
 
-const renderTopMovies = (data) => {
-    var arr = [];
-    while(arr.length < 10){
-        var r = Math.floor(Math.random() * 100) + 1;
-        if(arr.indexOf(r) === -1) arr.push(r);
-    }
-    for (let i = 0; i < arr.length; i++) {
-        movieItem[i+16].innerHTML = `
-            <img src="${data.items[arr[i]].image}" alt="" class="movie-list-item-img">
-            <span class="movie-list-item-title">${data.items[arr[i]].title}</span>
-        `
-    }
-    getTopMovies();
-}
-
 const getSearchResults = async (inputValue) => {
     try{
         const response = await fetch(apiUrl + inputValue);
@@ -232,19 +216,6 @@ const getRating = async (movieId) => {
     }catch(error){
         console.error('Network error here ',error);
     }
-    
-};
-
-const getTopMovies = async () => {
-    try{
-        const response = await fetch(topMovies);
-        const data = await response.json();
-        console.log(data);
-        renderTopMovies(data);
-    }catch(error){
-        console.error('Network error here ',error);
-    }
-    
 };
 
 //execute only once
@@ -259,4 +230,3 @@ var showFirst = (function() {
 })();
 
 showFirst();
-getTopMovies();
